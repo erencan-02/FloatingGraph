@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <main>
+    </main>
+    <form action="/file-upload" class="dropzone" id="image-dropzone">
+      <!--<input type="image/jpg" name="file" />-->
+    </form>
+    <script src="sketch.js"></script>
+    <script src="listener.js"></script>
+
+    <script>
+      // Note that the name "myDropzone" is the camelized
+      // id of the form.
+      Dropzone.options.myDropzone = {
+        paramName: "file", // The name that will be used to transfer the file
+        maxFilesize: 40, // MB
+        maxFiles: 1,
+        renameFile: "image",
+        
+        //accept: (file, done) => processFile(file, done),
+
+        uploadprogress: function(file, progress, bytesSent) {
+          // Display the progress
+          console.log(progress);
+        }
+      };
+    </script>
+
+
+    <script src="dropbox.js"></script>
+    
+  </body>
+</html>

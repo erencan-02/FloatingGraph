@@ -1,0 +1,1 @@
+drop down image => (1) clear (2) recreate imgae with nodes
