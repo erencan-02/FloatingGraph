@@ -91,9 +91,7 @@ function setup() {
   for(let i=0; i<INITIAL_NODE_COUNT; i++){
     let randomX = rand(NODE_RADIUS, SCREEN_WIDTH-NODE_RADIUS, true);
     let randomY = rand(NODE_RADIUS, SCREEN_HEIGHT-NODE_RADIUS, true);
-    
-    //let randomSpeedX = rand(LOWER_SPEED_BOUND, UPPER_SPEED_BOUND);
-    //let randomSpeedY = rand(LOWER_SPEED_BOUND, UPPER_SPEED_BOUND);
+
     let randomSpeedX = randomSpeed();
     let randomSpeedY = randomSpeed();
     
