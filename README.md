@@ -9,12 +9,6 @@
 
 `Node`, `Edge`, `Position` and `Vector`
 
-## Node
-
-## Position
-
-## Vector
-
 
 ## Customizable Parameters
 
@@ -52,16 +46,16 @@ These can be changed by opening the Browser console with `f12`. Start by clickin
 
 | Parameter | Input | Return Type | Semantics |
 | --- | --- | --- | --- |
-|createNode | Position, int speedX, int speedY | Node | Creates a new Node with given Parameters |
+|createNode | Position p, int speedX, int speedY | Node | Creates a new Node with given Parameters |
 |randomizeSpeed | none | void | Randomizes the speed of all nodes |
 |randomSpeed | none | int | Returns a random Speed within the boundaries |
-|addRandomNodes | int k | void | Adds randomly generated nodes |
-|removeNodes | int k | void | Removes nodes |
+|addRandomNodes | int k | void | Adds k randomly generated nodes |
+|removeNodes | int k | void | Removes k nodes |
 |removeAll | none | none | Removes all nodes |
 
 
 ## Additional Features
-vat partyLoghts = false;
+`setPartyMode(boolean b)`: Sets the value of partyMode to b (true/false).
 
 
 ## Example

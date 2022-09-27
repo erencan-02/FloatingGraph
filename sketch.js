@@ -28,7 +28,7 @@ var BG_COLOR = [13, 17, 23]
 
 var isPaused = false;
 
-var partyLights = false;
+var partyMode = false;
 
 
 if(navigator.userAgent.match(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)){
@@ -101,7 +101,7 @@ function setup() {
 
 function draw() {
 
-  if(partyLights){
+  if(partyMode){
     EDGE_COLOR = [0, random(0, 256),random(0, 256)];
   }
   else{
@@ -442,6 +442,10 @@ function removeFromArray(array, element){
   return array.filter(item => !(item === element));
 }
 
+
+function setPartyMode(b){
+  partyMode = b;
+}
 
 
 checkDOMChange();
