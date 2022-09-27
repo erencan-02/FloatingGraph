@@ -55,7 +55,7 @@ let distance = (n1, n2) => {
 }
 
 let calcOpacity = (d) => {
-  return (d >= NODE_RANGE ? 0 : 2 * (1 - (1/NODE_RANGE)*d)); 
+  return (d >= NODE_RANGE ? 0 : (1 - (1/NODE_RANGE)*d)); 
 }
 
 let optimalNodeCount = (w, h) => {
