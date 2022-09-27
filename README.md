@@ -5,6 +5,17 @@
 [FloatingGraph](https://erencan-02.github.io/FloatingGraph/) is a small visualization tool of Nodes floating in space.
 
 
+## Classes 
+
+`Node`, `Edge`, `Position` and `Vector`
+
+## Node
+
+## Position
+
+## Vector
+
+
 ## Customizable Parameters
 
 These can be changed by opening the Browser console with `f12`. Start by clicking and dragging your mouse on the Screen.
@@ -37,14 +48,15 @@ These can be changed by opening the Browser console with `f12`. Start by clickin
 |BG_COLOR| 	  array [R, G, B] | Background color|
 
 
-## Function
+## Functions
 
 | Parameter | Input | Return Type | Semantics |
 | --- | --- | --- | --- |
+|createNode | Position, int speedX, int speedY | Node | Creates a new Node with given Parameters |
 |randomizeSpeed | none | void | Randomizes the speed of all nodes |
 |randomSpeed | none | int | Returns a random Speed within the boundaries |
-|addRandomNodes | int | void | Adds randomly generated nodes |
-|removeNodes | int | void | Removes nodes |
+|addRandomNodes | int k | void | Adds randomly generated nodes |
+|removeNodes | int k | void | Removes nodes |
 |removeAll | none | none | Removes all nodes |
 
 
@@ -59,7 +71,7 @@ Overwriting the function `randomizeSpeed` would look like this:
 randomizeSpeed = () => {
 	nodes.forEach((n) => {
 		n.setSpeedX(2);
-		n.setSpeedX(-1);
+		n.setSpeedY(-1);
 	})
 };
 ```
