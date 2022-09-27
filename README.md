@@ -40,7 +40,7 @@ These can be changed by opening the Browser console with `f12`. Start by clickin
 ## Function
 
 | Parameter | Input | Return Type | Semantics |
-| --- | --- | --- | 
+| --- | --- | --- | --- |
 |randomizeSpeed | none | void | Randomizes the speed of all nodes |
 |randomSpeed | none | int | Returns a random Speed within the boundaries |
 |addRandomNodes | int | void | Adds randomly generated nodes |
