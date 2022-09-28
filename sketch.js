@@ -101,12 +101,13 @@ function setup() {
 
 function draw() {
 
-  if(partyMode){
+  /*if(partyMode){
+    tmp_edge_color = EDGE_COLOR;
     EDGE_COLOR = [0, random(0, 256),random(0, 256)];
   }
   else{
-    EDGE_COLOR = INITIAL_EDGE_COLOR;
-  }
+    EDGE_COLOR = tmp_edge_color;
+  }*/
 
   background(BG_COLOR[0], BG_COLOR[1], BG_COLOR[2]);
     
@@ -119,10 +120,16 @@ function draw() {
     }
   }
 
+  if(partyMode){
+    stroke(0, random(0, 256), random(0, 256));
+  }
+  else{
+    stroke(EDGE_COLOR[0], EDGE_COLOR[1], EDGE_COLOR[2]);
+  }
 
-  stroke(EDGE_COLOR[0], EDGE_COLOR[1], EDGE_COLOR[2]);
+
   for(let k=0; k<edges.length; k++){
-    strokeWeight(edges[k].opacity);
+    strokeWeight(edges[k].opacity*0.5);
     edges[k].show();
   }
 
